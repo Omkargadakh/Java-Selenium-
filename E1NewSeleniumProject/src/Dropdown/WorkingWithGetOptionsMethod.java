@@ -26,9 +26,13 @@ public class WorkingWithGetOptionsMethod {
 	WebElement multiSelectDropdown = driver.findElement(By.id("select-multiple-native"));
 	Select s = new Select(multiSelectDropdown);
 	List<WebElement> option = s.getOptions();
-	for(int i=0;i<option.size();i++)
+/*	for(int i=0;i<option.size();i++)
 	{
 		System.out.println(option.get(i).getText());
+	}*/
+	for (WebElement opt : option) {
+		System.out.println(opt.getText());
+		
 	}
 
  }
